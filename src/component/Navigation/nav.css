@@ -19,6 +19,9 @@ a:link{
 .active:hover{
     text-decoration: underline;
 }
-.active{
-    text-decoration: under;
-}
+.active-link {
+    color: green;
+    text-decoration: underline;
+    
+  }
+  

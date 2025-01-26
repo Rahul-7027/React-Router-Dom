@@ -4,6 +4,7 @@ import HomePage from './component/pages/Home/HomePage'
 import AboutPage from "./component/pages/About/AboutPage"
 import ContactPage from "./component/pages/Contact/ContactPage"
 import AppLayout from './component/layout/AppLayout'
+import Error from './component/pages/HandlingError/Error'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
     {
       path: "/",
       element: <AppLayout />,
+      errorElement:<Error/>,
       children: [
         {
           path: "/about",
