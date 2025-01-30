@@ -5,6 +5,8 @@ import AboutPage from "./component/pages/About/AboutPage"
 import ContactPage from "./component/pages/Contact/ContactPage"
 import AppLayout from './component/layout/AppLayout'
 import Error from './component/pages/HandlingError/Error'
+import Movie from './component/pages/MoviesData/Movie'
+import GetApiData from './component/Api/GetApiData'
 
 function App() {
 
@@ -12,7 +14,7 @@ function App() {
     {
       path: "/",
       element: <AppLayout />,
-      errorElement:<Error/>,
+      // errorElement:<Error/>,
       children: [
         {
           path: "/about",
@@ -25,6 +27,11 @@ function App() {
         {
           path: "/",
           element: <HomePage />
+        },
+        {
+          path: "/movie",
+          element: <Movie />,
+          loader:GetApiData
         }
       ]
     },
